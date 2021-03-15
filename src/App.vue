@@ -1,14 +1,20 @@
 <template>
-  <div id="app" class="app">asdasd</div>
+  <div id="app" class="app">
+    123
+    <Registration />
+    123
+  </div>
 </template>
 
 <script>
+import Registration from "./components/GameRegistration/index";
+
 import "reset-css";
 import "animate.css";
 
 export default {
   name: "App",
-  components: {},
+  components: {Registration},
 };
 </script>
 
