@@ -1,0 +1,28 @@
+@mobile: ~"(max-width: 768px)";
+@tablet: ~"(min-width: 769px) and (max-width: 1024px) and (orientation: portrait), (min-width: 864px) and (max-width: 1366px) and (orientation: landscape)";
+@tabletLandscape: ~"(min-width: 864px) and (max-width: 1366px) and (orientation: landscape)";
+@tabletPortrait: ~"(min-width: 768px) and (max-width: 1024px) and (orientation: portrait)";
+@desktop: ~"(min-width: 1025px)";
+@large: ~"(min-width: 1440px)";
+@mini-mobileLandscape: ~"only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape)";
+@mobileLandscape: ~"(max-width: 768px) and (orientation: landscape)";
+@landsacpeBigMobile: ~"only screen and (min-width: 873px) and (orientation: landscape)  and (max-width: 1024px)";
+
+// colors
+// .no-mobile {
+//   @media @mobile {
+//     display: none !important;
+//   }
+// }
+
+.no-desktop {
+  @media @desktop {
+    display: none !important;
+  }
+}
+
+.no-mobile {
+  @media @mobile {
+    display: none;
+  }
+}
