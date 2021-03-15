@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app">
-    123
+    <MainBlock />
     <Registration />
     123
   </div>
@@ -8,13 +8,14 @@
 
 <script>
 import Registration from "./components/GameRegistration/index";
+import MainBlock from "./components/MainBlock";
 
 import "reset-css";
 import "animate.css";
 
 export default {
   name: "App",
-  components: {Registration},
+  components: { Registration, MainBlock },
 };
 </script>
 
@@ -29,7 +30,7 @@ export default {
 
 body {
   // color: @main_color2;
-  font-family: "Roboto", "Sans-serif";
+  font-family: "21 Cent", "Sans-serif";
   // background-color: @main_color3;
 
   background-repeat: repeat;
