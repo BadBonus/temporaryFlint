@@ -259,7 +259,7 @@ import axios from "axios";
 import CustomSelector from "../CustomSelector.vue";
 import "./style.less";
 import { takeDatePeriodes, periodOfNumbers } from "../../helpers";
-import { getGoods, postRegistration } from "../../API";
+import { postRegistration } from "../../API";
 
 extend("required", {
   ...required,
@@ -326,8 +326,6 @@ export default {
         surname: null,
         email: null,
         secondName: null,
-        file: null,
-        file_name: null,
         phone: null,
         shop: null,
       },
@@ -375,8 +373,6 @@ export default {
         address !== null &&
         surname !== null &&
         this.isEmailValid &&
-        file !== null &&
-        file_name !== null &&
         this.isCorrectedPhoneNumber &&
         shop !== null
       );
@@ -419,8 +415,6 @@ export default {
       this.model["surname"] = null;
       this.model["secondName"] = null;
       this.model["email"] = null;
-      this.model["file"] = null;
-      this.model["file_name"] = null;
       this.model["phone"] = null;
       this.model["shop"] = null;
       this.rule1 = false;
