@@ -2,19 +2,21 @@
   <div id="app" class="app">
     <MainBlock />
     <Registration />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Registration from "./components/GameRegistration/index";
 import MainBlock from "./components/MainBlock";
+import Footer from "./components/Footer";
 
 import "reset-css";
 import "animate.css";
 
 export default {
   name: "App",
-  components: { Registration, MainBlock },
+  components: { Registration, MainBlock, Footer },
 };
 </script>
 

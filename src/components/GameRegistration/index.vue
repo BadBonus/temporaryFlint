@@ -111,7 +111,7 @@
               tag="div"
               class="ValidationProvider"
               v-slot="{ errors }"
-              rules="required"
+              rules="required|lengthCode:8"
               name="address"
             >
               <input
@@ -244,6 +244,11 @@ import "./style.less";
 import { takeDatePeriodes, periodOfNumbers } from "../../helpers";
 import { postRegistration } from "../../API";
 
+extend("lengthCode", {
+  ...length,
+  message: "Код состоит из 8 символов",
+});
+
 extend("required", {
   ...required,
   message: "Обязательное поле",
@@ -353,7 +358,7 @@ export default {
         operator !== null &&
         surname !== null &&
         this.isCorrectedPhoneNumber &&
-        serial_number !== null &&
+        serial_number.length === 8 &&
         phone !== null &&
         item !== null
       );
