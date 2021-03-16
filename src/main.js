@@ -19,7 +19,7 @@ Vue.use(VueWaypoint);
 Vue.use(VueLazyload);
 Vue.use(VueScreenSize);
 
-// Vue.prototype.$desktopSize = 1025;
+Vue.prototype.$desktopSize = 1025;
 
 new Vue({
   render: (h) => h(App),
