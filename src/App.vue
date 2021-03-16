@@ -2,7 +2,6 @@
   <div id="app" class="app">
     <MainBlock />
     <!-- <Registration /> -->
-    123
   </div>
 </template>
 
@@ -25,7 +24,7 @@ export default {
 @import "./assets/fonts/stylesheet.css";
 
 * {
-  transition: 0.35s;
+  // transition: 0.35s;
 }
 
 #app {
@@ -41,8 +40,9 @@ body {
     rgba(158, 47, 127, 1) 0%,
     rgba(126, 57, 140, 1) 100%
   );
+  color: #fff;
   // color: @main_color2;
-  font-family: "21 Cent", "Sans-serif";
+  font-family: "21 Cent", "Sans-serif" !important;
   // background-color: @main_color3;
 
   background-repeat: repeat;
