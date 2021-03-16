@@ -121,6 +121,9 @@ export default {
     position: absolute;
     right: 0;
     bottom: 0;
+    @media @desktop {
+      width: 65.14%;
+    }
   }
 }
 </style>

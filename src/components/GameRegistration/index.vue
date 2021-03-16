@@ -187,7 +187,7 @@
               </div>
               <span
                 >Регистрируясь, Вы подтверждаете, что изучили и согласны с
-                правилами рекламной акции.</span
+                <a href="rules.pdf" target="_blank">правилами рекламной акции.</a></span
               >
               <span class="errorContainer">{{ errors[0] }}</span>
             </div>
