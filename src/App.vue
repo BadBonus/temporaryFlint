@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="app">
     <MainBlock />
-    <Registration />
+    <!-- <Registration /> -->
     123
   </div>
 </template>
@@ -28,7 +28,19 @@ export default {
   transition: 0.35s;
 }
 
+#app {
+  & > * {
+    // max-width: 1440px;
+    margin: auto;
+  }
+}
+
 body {
+  background: linear-gradient(
+    90deg,
+    rgba(158, 47, 127, 1) 0%,
+    rgba(126, 57, 140, 1) 100%
+  );
   // color: @main_color2;
   font-family: "21 Cent", "Sans-serif";
   // background-color: @main_color3;
