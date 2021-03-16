@@ -94,7 +94,7 @@
                 rules="required"
                 v-slot="{ validate, errors }"
                 :name="'itemName'"
-                class="ValidationProvider"
+                class="ValidationProvider operator"
                 v-if="forceBadRerender"
               >
                 <CustomSelector
@@ -115,11 +115,33 @@
               name="address"
             >
               <input
-                v-model="model.address"
-                placeholder="Ваш адрес проживания"
+                v-model="model.serial_number"
+                placeholder="Код с акционной фишки*"
                 type="text"
               />
 
+              <span class="errorContainer">{{ errors[0] }}</span>
+            </ValidationProvider>
+
+            <ValidationProvider
+              tag="div"
+              rules="required"
+              v-slot="{ validate, errors }"
+              :name="'itemName'"
+              class="ValidationProvider tovar"
+              v-if="forceBadRerender"
+            >
+              <CustomSelector
+                v-model="model.item"
+                placeholder="Выберите товар*"
+                :maxLetters="23"
+                :options="[
+                  'Сухарики пшенично-ржаные «Flint» со вкусом красной икры, 110 г.',
+                  'Сухарики пшенично-ржаные «Flint» краб, 110 г.',
+                  'Сухарики пшенично-ржаные «Flint» со вкусом красной икры, 150 г.',
+                ]"
+                @blur="validate"
+              />
               <span class="errorContainer">{{ errors[0] }}</span>
             </ValidationProvider>
 
@@ -136,24 +158,6 @@
                 placeholder="Выберите торговую сеть"
                 :options="['Гиппо', 'Green', 'Виталюр']"
                 @blur="validate"
-              />
-              <span class="errorContainer">{{ errors[0] }}</span>
-            </ValidationProvider> -->
-          </div>
-          <div
-            class="GameRegistration__blockContent GameRegistration__blockContent-deskShopCheck no-mobile"
-          >
-            <!-- <ValidationProvider
-              tag="div"
-              rules="required"
-              v-slot="{ validate, errors }"
-              :name="'itemName'"
-              class="ValidationProvider"
-            >
-              <CustomSelector
-                v-model="model.shop"
-                placeholder="Выберите торговую сеть"
-                :options="['Гиппо', 'Green', 'Виталюр']"
               />
               <span class="errorContainer">{{ errors[0] }}</span>
             </ValidationProvider> -->
@@ -182,37 +186,8 @@
                 <!-- <img src="" alt="TEST" /> -->
               </div>
               <span
-                >Регистрируясь, Вы подтверждаете свое <br class="no-desktop" />
-                согласие на участие в рекламной игре.</span
-              >
-              <span class="errorContainer">{{ errors[0] }}</span>
-            </div>
-          </ValidationProvider>
-          <ValidationProvider
-            tag="div"
-            :rules="{ required: { allowFalse: false } }"
-            v-slot="{ errors }"
-            name="rule2"
-            class="ValidationProvider"
-          >
-            <div class="CustomCheckbox">
-              <input type="checkbox" v-model="rule2" />
-              <div
-                :class="{
-                  CustomCheckbox__pseudoInput: true,
-                  active: rule2,
-                }"
-              >
-                <span v-if="rule2">√</span>
-                <!-- <img src="" alt="test" /> -->
-              </div>
-              <span
-                >Регистрируясь, Вы подтверждаете, что изучили
-                <br class="no-desktop" />
-                и согласны с
-                <a href="rules.pdf" target="_blank"
-                  >правилами рекламной игры.</a
-                ></span
+                >Регистрируясь, Вы подтверждаете, что изучили и согласны с
+                правилами рекламной акции.</span
               >
               <span class="errorContainer">{{ errors[0] }}</span>
             </div>
@@ -334,7 +309,7 @@ export default {
         name: null,
         address: null,
         surname: null,
-        operator: 'МТС',
+        operator: "МТС",
         secondName: null,
         phone: null,
         shop: null,
