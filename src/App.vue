@@ -3,6 +3,12 @@
     <MainBlock />
     <Registration />
     <Footer />
+    <img src="../src/assets/left_coins.png" alt="монетки" class="coins_left" />
+    <img
+      src="../src/assets/right_coins.png"
+      alt="монетки"
+      class="coins_right"
+    />
   </div>
 </template>
 
@@ -37,6 +43,7 @@ export default {
 }
 
 body {
+  position: relative;
   background: linear-gradient(
     90deg,
     rgba(158, 47, 127, 1) 0%,
@@ -131,6 +138,26 @@ h2 {
   text-align: center;
   @media @desktop {
     font-size: 4vw;
+  }
+}
+
+.coins_left {
+  @media @desktop {
+    position: absolute;
+    top: 80.4vw;
+    left: 3.4vw;
+    bottom: 0;
+    width: 7.64vw;
+  }
+}
+
+.coins_right {
+  @media @desktop {
+    position: absolute;
+    right: 2.8vw;
+    top: 78.6vw;
+    bottom: 0;
+    width: 6.8vw;
   }
 }
 </style>
