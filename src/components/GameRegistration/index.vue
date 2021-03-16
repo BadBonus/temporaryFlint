@@ -2,6 +2,9 @@
   <div class="GameRegistration" id="GameRegistration">
     <ValidationObserver ref="form" v-slot="{ invalid, reset }">
       <br v-if="isFinishedRegistration" />
+      <h2 class="registrationEnd" v-if="!isFinishedRegistration">
+        Регистрация
+      </h2>
       <h2 class="registrationEnd" v-if="isFinishedRegistration">
         Регистрация завершена
       </h2>

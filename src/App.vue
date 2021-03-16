@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="app">
     <MainBlock />
-    <!-- <Registration /> -->
+    <Registration />
   </div>
 </template>
 
