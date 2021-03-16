@@ -89,22 +89,22 @@ a {
   cursor: pointer;
   width: 94.2vw;
   padding: 1.6vw 0;
-  background: @main_color1;
-  border: 3px solid #f0dac0;
+  background: #7e398c;
+  border: none;
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px #0f390a;
+  box-shadow: 0px 0px 10px #000000;
   border-radius: 91px;
   display: flex;
   align-content: center;
   align-items: center;
   text-align: center;
   justify-content: center;
-  font-family: "Lobster";
+  font-family: "Open sans";
   color: @main_color2;
   font-size: 6.5vw;
   margin: auto;
   &[disabled] {
-    opacity: 0.5;
+    opacity: 0.35;
     cursor: not-allowed;
   }
   @media @desktop {
@@ -112,10 +112,15 @@ a {
     // font-size: 2.35vw;
     // text-transform: none;
     // padding: 1.5vw 0;
+    margin-top: 1.5vw;
+    font-size: 2vw !important;
+    padding: 1% 0 !important;
+    width: 25vw !important;
+    border-width: 4px;
 
     &:hover:not([disabled]) {
       // color: @main_color1;
-      background: #48c13c;
+      // background: #48c13c;
     }
   }
 }
