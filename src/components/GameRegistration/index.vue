@@ -197,9 +197,7 @@
         <button
           type="submit"
           class="btn"
-          :disabled="
-            (!customIsValidForm && !model.file !== null) || isLoadingData
-          "
+          :disabled="!customIsValidForm || isLoadingData"
         >
           Зарегистрироваться
         </button>
@@ -303,16 +301,15 @@ export default {
       inputErrors: {},
       items: [],
       rule1: false,
-      rule2: false,
       forceBadRerender: true,
       model: {
         name: null,
-        address: null,
+        serial_number: null,
         surname: null,
         operator: "МТС",
         secondName: null,
         phone: null,
-        shop: null,
+        item: null,
       },
     };
   },
@@ -347,19 +344,18 @@ export default {
     customIsValidForm() {
       const {
         rule1,
-        rule2,
-        model: { name, address, surname, file, file_name, shop },
+        model: { name, serial_number, surname, operator, phone, item },
       } = this;
 
       return (
         rule1 &&
-        rule2 &&
         name !== null &&
-        address !== null &&
+        operator !== null &&
         surname !== null &&
-        this.isEmailValid &&
         this.isCorrectedPhoneNumber &&
-        shop !== null
+        serial_number !== null &&
+        phone !== null &&
+        item !== null
       );
     },
   },
