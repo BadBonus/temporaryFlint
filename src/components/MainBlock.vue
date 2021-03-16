@@ -8,13 +8,21 @@
         class="MainBlock_user"
       />
       <!-- <img src="../assets/client_mob.png" alt="монеты за багеты" class="MainBlock_user"> -->
-
+      <!--
       <img
         src="../assets/mainBlock_line.png"
-        alt="декорация"
+        alt="декорация линии"
         class="MainBlock__decorationLines"
-      />
+      /> -->
       <!-- <img src="../assets/mainBlock_line_mob.png" alt="" class="MainBlock__decorationLines"> -->
+      <div class="MainBlock__lines">
+        <img src="../assets/lines/Vector1.svg" alt="line" />
+        <img src="../assets/lines/Vector2.svg" alt="line" />
+        <img src="../assets/lines/Vector3.svg" alt="line" />
+        <img src="../assets/lines/Vector4.svg" alt="line" />
+        <img src="../assets/lines/Vector5.svg" alt="line" />
+        <img src="../assets/lines/Vector6.svg" alt="line" />
+      </div>
     </div>
     <div class="MainBlock__secondPart">
       <h2>Условия акции</h2>
@@ -86,7 +94,7 @@ export default {
     @media @desktop {
       line-height: 75%;
       position: absolute;
-      left: 3.3%;
+      left: 6%;
       top: 0;
       margin-top: 5%;
       font-size: 9.92vw;
@@ -104,21 +112,56 @@ export default {
     position: relative;
     @media @desktop {
       width: 25vw;
-      width: 70.4%;
+      width: 74%;
       margin: auto;
-      padding-top: 8%;
-      margin-right: 0.45%;
+      padding-top: 7.7vw;
+      margin-right: 2.35%;
     }
   }
 
-  .MainBlock__decorationLines {
+  // .MainBlock__decorationLines {
+  //   position: absolute;
+  //   width: 100%;
+  //   z-index: 1;
+  //   @media @desktop {
+  //     margin-top: 35.5%;
+  //     width: 100%;
+  //     top: 0;
+  //   }
+  // }
+
+  .MainBlock__lines {
     position: absolute;
-    width: 100%;
+    right: 0;
+    top: 74.5vw;
     z-index: 1;
-    @media @desktop {
-      margin-top: 35.5%;
+    /* bottom: 0; */
+    height: 10vw;
+    width: 100%;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
       width: 100%;
-      top: 0;
+      &:nth-child(1) {
+        bottom: 31.4vw;
+      }
+      &:nth-child(2) {
+        bottom: 25.8vw;
+      }
+      &:nth-child(3) {
+        bottom: 20.1vw;
+      }
+      &:nth-child(4) {
+        bottom: 14.4vw;
+      }
+      &:nth-child(5) {
+        bottom: 8.6vw;
+      }
+      &:nth-child(6) {
+        bottom: 4vw;
+      }
     }
   }
   h2 {
