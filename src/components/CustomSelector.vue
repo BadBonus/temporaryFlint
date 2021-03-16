@@ -15,7 +15,7 @@
       @blur="blur"
       @click="openList"
       tabindex="0"
-      :style="{ color: this.placeholder === choosedName ? 'gray' : '#1E7D14' }"
+      :style="{ color: this.placeholder === choosedName ? '#ffffff' : '#ffffff' }"
     >
       {{ choosedName }}
       <img

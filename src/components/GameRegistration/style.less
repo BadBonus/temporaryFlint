@@ -13,6 +13,10 @@
   background-color: #fff;
   @media @desktop {
   }
+  input {
+    font-family: "Open Sans";
+  }
+
   .registrationEnd {
     text-transform: uppercase;
     font-weight: 500;
@@ -32,8 +36,8 @@
     margin: 6.3vw auto;
     margin-bottom: 0;
     @media @desktop {
-      margin-top: 2.2vw;
-      width: 83.9%;
+      margin-top: 4.8%;
+      width: 68%;
     }
   }
 
@@ -45,7 +49,11 @@
     border-radius: 200px;
     border: none;
     box-sizing: border-box;
-    color: @main_color1;
+    background: #7e398c;
+    color: #fff;
+    &::placeholder {
+      color: #fff;
+    }
     @media @desktop {
       padding-left: 1.3vw;
     }
@@ -57,7 +65,7 @@
     @media @desktop {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 2.1vw;
+      margin-bottom: 2.1%;
     }
 
     &-deskShopCheck {
@@ -94,11 +102,11 @@
     margin-left: 4.4vw;
     font-size: 4.3vw;
     display: block;
-    color: @main_color2;
+    color: #7e398c;
     margin-bottom: 2vw;
     @media @desktop {
       font-size: 1.3vw;
-      margin-bottom: 0.4vw;
+      margin-bottom: 0.8%;
       margin-left: 8.7vw;
 
       &.GameRegistration__blockContentTitle-duoBlock {
@@ -130,7 +138,7 @@
       & > *:last-child {
         @media @desktop {
           // margin-left: 1.9% !important;
-          width: 100% !important;
+          // width: 100% !important;
         }
       }
     }
@@ -316,9 +324,11 @@
     border-radius: 200px;
     font-size: inherit;
     border: none;
-    background: #fff;
+    background: #7e398c;
     padding-left: 4.2vw;
     box-sizing: border-box;
+    font-family: "Open Sans";
+
     @media @desktop {
       padding-left: 0.2vw;
     }
@@ -355,10 +365,10 @@
     font-size: 4.8vw;
 
     @media @desktop {
-      height: 3.5vw;
+      height: 2.8vw;
       font-size: 1.3vw;
       // margin-right: 0.4vw;
-      width: 26.9vw;
+      width: 32.578%;
 
       &-mlS {
         margin-left: 0.7vw;
@@ -556,7 +566,6 @@
     position: absolute;
     left: 0;
     top: 0;
-    // background-color: tomato;
   }
   &__helper {
     position: absolute;

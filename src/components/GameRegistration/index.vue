@@ -88,19 +88,25 @@
                 />
                 <span class="errorContainer">{{ errors[0] }}</span>
               </ValidationProvider>
+
+              <ValidationProvider
+                tag="div"
+                rules="required"
+                v-slot="{ validate, errors }"
+                :name="'itemName'"
+                class="ValidationProvider"
+                v-if="forceBadRerender"
+              >
+                <CustomSelector
+                  v-model="model.operator"
+                  placeholder="Оператор"
+                  :options="['МТС', 'А1', 'Life']"
+                  @blur="validate"
+                />
+                <span class="errorContainer">{{ errors[0] }}</span>
+              </ValidationProvider>
             </div>
 
-            <ValidationProvider
-              tag="div"
-              class="ValidationProvider"
-              v-slot="{ errors }"
-              rules="required|email"
-              name="email"
-            >
-              <input v-model="model.email" placeholder="E-mail*" type="text" />
-
-              <span class="errorContainer">{{ errors[0] }}</span>
-            </ValidationProvider>
             <ValidationProvider
               tag="div"
               class="ValidationProvider"
@@ -116,7 +122,8 @@
 
               <span class="errorContainer">{{ errors[0] }}</span>
             </ValidationProvider>
-            <ValidationProvider
+
+            <!-- <ValidationProvider
               tag="div"
               rules="required"
               v-slot="{ validate, errors }"
@@ -131,12 +138,12 @@
                 @blur="validate"
               />
               <span class="errorContainer">{{ errors[0] }}</span>
-            </ValidationProvider>
+            </ValidationProvider> -->
           </div>
           <div
             class="GameRegistration__blockContent GameRegistration__blockContent-deskShopCheck no-mobile"
           >
-            <ValidationProvider
+            <!-- <ValidationProvider
               tag="div"
               rules="required"
               v-slot="{ validate, errors }"
@@ -149,7 +156,7 @@
                 :options="['Гиппо', 'Green', 'Виталюр']"
               />
               <span class="errorContainer">{{ errors[0] }}</span>
-            </ValidationProvider>
+            </ValidationProvider> -->
           </div>
         </div>
         <div class="GameRegistration__RulesBlock">
@@ -327,7 +334,7 @@ export default {
         name: null,
         address: null,
         surname: null,
-        email: null,
+        operator: 'МТС',
         secondName: null,
         phone: null,
         shop: null,
