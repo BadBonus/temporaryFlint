@@ -92,7 +92,7 @@ a {
   background: #7e398c;
   border: none;
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px #000000;
+  // box-shadow: 0px 0px 10px #000000;
   border-radius: 91px;
   display: flex;
   align-content: center;

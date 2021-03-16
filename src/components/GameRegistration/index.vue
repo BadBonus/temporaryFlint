@@ -395,12 +395,11 @@ export default {
       this.model["name"] = null;
       this.model["surname"] = null;
       this.model["secondName"] = null;
-      this.model["email"] = null;
+      this.model["item"] = null;
       this.model["phone"] = null;
-      this.model["shop"] = null;
+      this.model["serial_number"] = null;
       this.rule1 = false;
-      this.rule2 = false;
-      this.model["address"] = null;
+      this.model["operator"] = "МТС";
       this.$nextTick(() => {
         this.$refs.form.reset();
       });
@@ -440,13 +439,17 @@ export default {
     },
     async onSubmit() {
       this.isLoadingData = true;
-      this.$gtag.event("registr_button", {
-        event_category: "submit",
-      });
-
       let form = new FormData();
       const {
-        model: { name, surname, email, file, secondName, phone, address, shop },
+        model: {
+          name,
+          surname,
+          secondName,
+          item,
+          phone,
+          serial_number,
+          operator,
+        },
       } = this;
 
       // choosedItems.forEach((value, index) => {
@@ -460,13 +463,12 @@ export default {
       // });
 
       form.append("name", name);
-      form.append("email", email);
-      form.append("file", file);
+      form.append("item", item);
+      form.append("serial_number", serial_number);
       form.append("phone", phone);
       form.append("surname", surname);
-      form.append("address", address);
+      form.append("operator", operator);
       form.append("secondName", secondName);
-      form.append("shop", shop);
 
       axios
         .post(postRegistration, form)
