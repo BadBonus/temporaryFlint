@@ -3,11 +3,30 @@
     <MainBlock />
     <Registration />
     <Footer />
-    <img src="../src/assets/left_coins.png" alt="монетки" class="coins_left" />
+    <img
+      src="../src/assets/left_coins.png"
+      alt="монетки"
+      class="coins_left"
+      v-if="!isMobileSize"
+    />
     <img
       src="../src/assets/right_coins.png"
       alt="монетки"
       class="coins_right"
+      v-if="!isMobileSize"
+    />
+
+    <img
+      src="../src/assets/left_coins_mob.png"
+      alt="монетки"
+      class="coins_left"
+      v-if="isMobileSize"
+    />
+    <img
+      src="../src/assets/right_coins_mob.png"
+      alt="монетки"
+      class="coins_right"
+      v-if="isMobileSize"
     />
   </div>
 </template>
@@ -23,6 +42,11 @@ import "animate.css";
 export default {
   name: "App",
   components: { Registration, MainBlock, Footer },
+  computed: {
+    isMobileSize() {
+      return this.$vssWidth < this.$desktopSize;
+    },
+  },
 };
 </script>
 
@@ -142,8 +166,10 @@ h2 {
 }
 
 .coins_left {
+  position: absolute;
+  top: 342vw;
+  left: 8vw;
   @media @desktop {
-    position: absolute;
     top: 80.4vw;
     left: 3.4vw;
     bottom: 0;
@@ -152,8 +178,11 @@ h2 {
 }
 
 .coins_right {
+  position: absolute;
+  top: 316.4vw;
+  right: 4.5vw;
+  width: 15.2vw;
   @media @desktop {
-    position: absolute;
     right: 2.8vw;
     top: 78.6vw;
     bottom: 0;

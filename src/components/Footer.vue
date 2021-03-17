@@ -97,7 +97,7 @@ export default {
     @media @desktop {
       margin-top: 5.7vw;
       font-size: 1.55vw;
-      line-height: unset;
+      line-height: normal;
     }
     li {
       margin: auto;
