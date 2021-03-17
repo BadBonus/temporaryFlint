@@ -135,11 +135,7 @@
                 v-model="model.item"
                 placeholder="Выберите товар*"
                 :maxLetters="23"
-                :options="[
-                  'Сухарики пшенично-ржаные «Flint» со вкусом красной икры, 110 г.',
-                  'Сухарики пшенично-ржаные «Flint» краб, 110 г.',
-                  'Сухарики пшенично-ржаные «Flint» со вкусом красной икры, 150 г.',
-                ]"
+                :options="modItems"
                 @blur="validate"
               />
               <span class="errorContainer">{{ errors[0] }}</span>
@@ -186,8 +182,12 @@
                 <!-- <img src="" alt="TEST" /> -->
               </div>
               <span
-                >Регистрируясь, Вы подтверждаете, <br class="no-desktop"> что изучили и согласны <br class="no-desktop"> с
-                <a href="rules.pdf" target="_blank">правилами рекламной акции.</a></span
+                >Регистрируясь, Вы подтверждаете, <br class="no-desktop" />
+                что изучили и согласны <br class="no-desktop" />
+                с
+                <a href="rules.pdf" target="_blank"
+                  >правилами рекламной акции.</a
+                ></span
               >
               <span class="errorContainer">{{ errors[0] }}</span>
             </div>
@@ -241,8 +241,7 @@ import axios from "axios";
 
 import CustomSelector from "../CustomSelector.vue";
 import "./style.less";
-import { takeDatePeriodes, periodOfNumbers } from "../../helpers";
-import { postRegistration } from "../../API";
+import { postRegistration, getGoods } from "../../API";
 
 extend("lengthCode", {
   ...length,
@@ -336,9 +335,6 @@ export default {
     isEmailValid() {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(this.model.email);
-    },
-    febrDays() {
-      return periodOfNumbers(28);
     },
     isMobileSize() {
       return document.documentElement.clientWidth < 1025;
@@ -474,6 +470,7 @@ export default {
       form.append("surname", surname);
       form.append("operator", operator);
       form.append("secondName", secondName);
+      form.append("product[0]", item);
 
       axios
         .post(postRegistration, form)
@@ -501,7 +498,7 @@ export default {
     },
   },
   mounted() {
-    // axios.post(getGoods).then(({ data }) => (this.items = [...data.data]));
+    axios.post(getGoods).then(({ data }) => (this.items = [...data.data]));
   },
 };
 </script>
