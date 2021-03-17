@@ -156,7 +156,7 @@ export default {
       width: 74%;
       margin-top: 0;
       margin: auto;
-      padding-top: 7.7vw;
+      padding-top: 8.1vw;
       margin-right: 2.35%;
     }
   }
