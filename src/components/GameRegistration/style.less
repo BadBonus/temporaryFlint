@@ -8,6 +8,16 @@
   }
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .GameRegistration {
+    .btn {
+      @media @desktop {
+        margin-top: 4.5vw !important;
+      }
+    }
+  }
+}
+
 .GameRegistration {
   color: #7e398c;
   background-color: #fff;
@@ -479,6 +489,7 @@
       border-width: 4px;
     }
   }
+
   a {
     color: #7e398c;
     text-decoration: underline;
@@ -776,7 +787,6 @@
     font-weight: bold;
     color: #fff;
     display: inline-block;
-    align-self: center;
     margin-left: 2vw;
     align-self: flex-start;
     top: 0.9vw;
@@ -786,7 +796,7 @@
       margin-right: 1.6%;
       bottom: 0.2vw;
       margin-left: 0;
-      align-self: unset;
+      align-self: center;
       top: 0;
     }
     & + span {

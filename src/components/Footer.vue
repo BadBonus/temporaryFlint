@@ -3,7 +3,10 @@
     <h2>Период акции</h2>
     <ul class="Footer__timing">
       <li>
-        <span>Срок проведения Акции «Монеты за багеты!» </span>
+        <span
+          >Срок проведения Акции <br class="no-desktop" />
+          «Монеты за багеты!»
+        </span>
         <p>с 20.03.21 по 30.07.21 г.</p>
       </li>
       <li>
@@ -31,8 +34,14 @@
       src="../assets/footer_line.png"
       class="Footer__decoration"
       alt="декорация"
+      v-if="!isMobileSize"
     />
-    <!-- <img src="../assets/footer_line_mob.png" class="Footer__decoration" alt="декорация"> -->
+    <img
+      v-if="isMobileSize"
+      src="../assets/footer_line_mob.png"
+      class="Footer__decoration"
+      alt="декорация"
+    />
   </footer>
 </template>
 
@@ -44,7 +53,11 @@ export default {
     return {};
   },
   watch: {},
-  computed: {},
+  computed: {
+    isMobileSize() {
+      return this.$vssWidth < this.$desktopSize;
+    },
+  },
   methods: {},
 };
 </script>
@@ -62,12 +75,15 @@ export default {
 
 .Footer {
   position: relative;
+  padding-bottom: 31.8vw;
   @media @desktop {
     padding-bottom: 15.3vw;
   }
   h2 {
     font-weight: 400;
     text-transform: uppercase;
+    padding-top: 16.3vw;
+    font-size: 6.5vw;
     @media @desktop {
       font-size: 3.7vw;
       padding-top: 6.4vw;
@@ -75,13 +91,18 @@ export default {
   }
   .Footer__timing {
     font-weight: 400;
+    margin-top: 10.8vw;
+    font-size: 5vw;
+    line-height: 7vw;
     @media @desktop {
       margin-top: 5.7vw;
       font-size: 1.55vw;
+      line-height: unset;
     }
     li {
       margin: auto;
       text-align: center;
+      margin-bottom: 11.5vw;
       @media @desktop {
         margin-bottom: 4.6vw;
       }
@@ -93,19 +114,26 @@ export default {
         &::before {
           content: "";
           position: absolute;
-          width: 18.6vw;
+          width: 60vw;
+          top: 7.2vw;
           background: #fff;
           height: 4px;
           left: 0;
-          top: 2.2vw;
           right: 0;
           margin: auto;
+          @media @desktop {
+            width: 18.6vw;
+            top: 2.2vw;
+          }
         }
       }
     }
   }
   .Footer__otherInfo {
     text-align: center;
+    font-size: 2.77vw;
+    padding-top: 4.7vw;
+    line-height: 4.4vw;
 
     @media @desktop {
       font-size: 0.96vw;
@@ -113,7 +141,11 @@ export default {
       line-height: 1.8vw;
     }
     li:not(:last-of-type) {
-      margin-bottom: 1.8vw;
+      margin-bottom: 5.2vw;
+
+      @media @desktop {
+        margin-bottom: 1.8vw;
+      }
     }
   }
 
@@ -121,6 +153,7 @@ export default {
     position: absolute;
     right: 0;
     bottom: 0;
+    width: 88.5%;
     @media @desktop {
       width: 65.14%;
     }
