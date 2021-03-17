@@ -169,6 +169,7 @@ h2 {
   position: absolute;
   top: 342vw;
   left: 8vw;
+  width: 10.93vw;
   @media @desktop {
     top: 80.4vw;
     left: 3.4vw;
