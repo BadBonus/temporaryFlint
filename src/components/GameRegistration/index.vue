@@ -186,7 +186,7 @@
                 <!-- <img src="" alt="TEST" /> -->
               </div>
               <span
-                >Регистрируясь, Вы подтверждаете, что изучили и согласны с
+                >Регистрируясь, Вы подтверждаете, <br class="no-desktop"> что изучили и согласны <br class="no-desktop"> с
                 <a href="rules.pdf" target="_blank">правилами рекламной акции.</a></span
               >
               <span class="errorContainer">{{ errors[0] }}</span>
