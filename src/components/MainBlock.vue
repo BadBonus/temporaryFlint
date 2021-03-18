@@ -94,7 +94,6 @@ export default {
 };
 </script>
 <style lang="less">
-@import "../styles/variables.less";
 @import "../styles/media.less";
 
 @-moz-document url-prefix() {

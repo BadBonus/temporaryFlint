@@ -140,23 +140,6 @@
               />
               <span class="errorContainer">{{ errors[0] }}</span>
             </ValidationProvider>
-
-            <!-- <ValidationProvider
-              tag="div"
-              rules="required"
-              v-slot="{ validate, errors }"
-              :name="'itemName'"
-              class="ValidationProvider no-desktop"
-              v-if="forceBadRerender"
-            >
-              <CustomSelector
-                v-model="model.shop"
-                placeholder="Выберите торговую сеть"
-                :options="['Гиппо', 'Green', 'Виталюр']"
-                @blur="validate"
-              />
-              <span class="errorContainer">{{ errors[0] }}</span>
-            </ValidationProvider> -->
           </div>
         </div>
         <div class="GameRegistration__RulesBlock">
@@ -258,7 +241,6 @@ extend("email", {
 });
 
 extend("alpha", alpha);
-extend("size", { ...size, message: "картинка имеет слишком большой вес" });
 extend("min", min);
 extend("min_value", {
   ...min_value,
@@ -268,8 +250,6 @@ extend("is", {
   ...is,
   message: "Требуется соглашения с правилами",
 });
-extend("image", { ...image, message: "Требуется формат png, jpg, jpeg" });
-extend("mimes", { ...mimes, message: "Требуется формат png, jpg, jpeg" });
 
 extend("length", (value) => {
   let checkNumber = value !== null && value.trim();
@@ -318,10 +298,10 @@ export default {
     };
   },
   computed: {
-    isFinishedRegistration() {
-      const finishDate = new Date("2021-05-01T00:00:00");
-      return finishDate < new Date();
-    },
+    // isFinishedRegistration() {
+    //   const finishDate = new Date("2021-05-01T00:00:00");
+    //   return finishDate < new Date();
+    // },
     isCorrectedPhoneNumber() {
       let checkNumber = this.model.phone !== null && this.model.phone.trim();
       const re = /(\s*)?(\+)?\d{12}/;
@@ -489,12 +469,6 @@ export default {
             this.finishedMessage = "Произошла ошибка, попробуйте позже";
           }
         });
-    },
-  },
-  watch: {
-    rule1: function () {
-      // console.log(this.model);
-      // console.log(this.customIsValidForm);
     },
   },
   mounted() {

@@ -24,66 +24,6 @@
 
 @font-face {
     font-family: '21 Cent';
-    src: url('21Cent-BoldItalic.eot');
-    src: local('21 Cent Bold Italic'), local('21Cent-BoldItalic'),
-        url('21Cent-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('21Cent-BoldItalic.woff2') format('woff2'),
-        url('21Cent-BoldItalic.woff') format('woff'),
-        url('21Cent-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: '21 Cent Condensed';
-    src: url('21CentCondensed-UltraLight.eot');
-    src: local('21 Cent Condensed UltraLight'), local('21CentCondensed-UltraLight'),
-        url('21CentCondensed-UltraLight.eot?#iefix') format('embedded-opentype'),
-        url('21CentCondensed-UltraLight.woff2') format('woff2'),
-        url('21CentCondensed-UltraLight.woff') format('woff'),
-        url('21CentCondensed-UltraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: '21 Cent Condensed';
-    src: url('21CentCondensed-UltraLightItali.eot');
-    src: local('21 Cent Condensed UltraLight Italic'), local('21CentCondensed-UltraLightItali'),
-        url('21CentCondensed-UltraLightItali.eot?#iefix') format('embedded-opentype'),
-        url('21CentCondensed-UltraLightItali.woff2') format('woff2'),
-        url('21CentCondensed-UltraLightItali.woff') format('woff'),
-        url('21CentCondensed-UltraLightItali.ttf') format('truetype');
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: '21 Cent';
-    src: url('21Cent-Thin.eot');
-    src: local('21 Cent Thin'), local('21Cent-Thin'),
-        url('21Cent-Thin.eot?#iefix') format('embedded-opentype'),
-        url('21Cent-Thin.woff2') format('woff2'),
-        url('21Cent-Thin.woff') format('woff'),
-        url('21Cent-Thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: '21 Cent';
-    src: url('21Cent-Italic.eot');
-    src: local('21 Cent Italic'), local('21Cent-Italic'),
-        url('21Cent-Italic.eot?#iefix') format('embedded-opentype'),
-        url('21Cent-Italic.woff2') format('woff2'),
-        url('21Cent-Italic.woff') format('woff'),
-        url('21Cent-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: '21 Cent';
     src: url('21Cent.eot');
     src: local('21 Cent'), local('21Cent'),
         url('21Cent.eot?#iefix') format('embedded-opentype'),
@@ -91,29 +31,5 @@
         url('21Cent.woff') format('woff'),
         url('21Cent.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: '21 Cent Condensed';
-    src: url('21CentCondensed-Italic.eot');
-    src: local('21 Cent Condensed Italic'), local('21CentCondensed-Italic'),
-        url('21CentCondensed-Italic.eot?#iefix') format('embedded-opentype'),
-        url('21CentCondensed-Italic.woff2') format('woff2'),
-        url('21CentCondensed-Italic.woff') format('woff'),
-        url('21CentCondensed-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: '21 Cent';
-    src: url('21Cent-Black.eot');
-    src: local('21 Cent Black'), local('21Cent-Black'),
-        url('21Cent-Black.eot?#iefix') format('embedded-opentype'),
-        url('21Cent-Black.woff2') format('woff2'),
-        url('21Cent-Black.woff') format('woff'),
-        url('21Cent-Black.ttf') format('truetype');
-    font-weight: 900;
     font-style: normal;
 }
