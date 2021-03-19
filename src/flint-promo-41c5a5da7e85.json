@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "flint-promo",
+  "private_key_id": "41c5a5da7e85a315130f68f017163e645b2359ae",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC76BXKDKV17QUx\nwiO+zktlMoPE1dFKSxd+G0mmOwTocj1D5hE7SEmsNH9iR/w3wdtp2PcJeylCAued\nocyySQ5DEgi1K3UITdZ/BEKr13uNhbCJLFWNl8ErqKF6Nj7zHq0weodvYatwLMjx\nEAyiPRPNhuNmre75L8dFyH4AjLk3/H4mFd0MyCD4m+J4LT9Nz/dyPTa2ma1Y2sLR\nAUt/9dfBgyYu7AWwtklALcnoRZweowIatXbCq7v0CXpZ6irKyK1rwzVxB7U53O6p\n3lzTC2isVD6m2767qpLwc28TIqC1x8Hkh5xjLf/im2lDskyskZ0Swl5dz5sZR9me\nbjbEDm55AgMBAAECggEAGM8MNsBIsDMk9mwtZVRoppRuyp7Nom4boe4JtprK4RhZ\nd7d5GvHxAtLDkWmeUTY/uSUzfdr27YeN+5qQeLwl1+Zvo+Ei8ypjts1h3WehIQ7q\nPzzNPC6HCzPubeuaOrsYHp3EIokrUK95BZVwNZNezp86iCSlYoepBaZHjIcH2pjk\nie3skxllMyw3XYYJbt7Tw7AD3NL3rAZPzyGLAyzHAO71ue+oWpTzawAi806dFseF\nBBLPeMdX6XYIaB+jxFp1La6G81m9D5T+GmPxzgNSZIJq3vf9bI+ndUVDi+b2abCo\nd70XqFEpXzPe5XwKY30gTk0aXA+dlKQRRa8nvA0yaQKBgQD25LwWwHvsDXXmnEOl\n/Xd5OYfh/YqzEdiFlhekNNWsMc2nNEcyknFMFflg2PgDtJ/dei0odRkN17bFBWzm\nfqV47VrCIWqO6LFXB2tM+ladGyRq2dbfVei7rJGv5FNXW0XJ4XWOQqhhw800j9Zz\nf+hrcInbXSr2YUVpHUCyJUYw5wKBgQDC1l9wtE3azT58LCX8V39zAMHjil3XBUnN\nqr+Jw83qQ2CkkQoFVDI7MuWD4aKEE6RQuP7ckN4QsB4v0AAt6SKgjvIRJb0hTrkQ\nOgc+aqG6yW+YHSwctCD9XVgWXl6Nt8qCdsQLUu6ykEL4U4SXpRxttfFTzr3hmYbA\ndDnh8GSZnwKBgHmnyfqYDDgLhe4FT9wp4kYMkCVOTprgD0X76FhUZHk97S0XuIF1\n4XfxV/ld0A/bX+69NiU6VgcZJQk+HCQTgavtoQwJdT1H8aKFmFzM+gLeDfrMrnFM\nHqrjZMI8Csj/w4qvmsJnnBrYZXQh8DTncPoH8RXzeaj/0zjxXiCp90U/AoGBAJPW\nlhSuu2SK2B7gYPJYchyRNo2xMAM3wAiOx0eBi312Ip68bx4cBQFmXUD0tJwDS2r0\n9G3ofperCzy8V2Z+wAeUb5kTSa88TLBDV7vErXNN5Z9Gg3JEO8QEUBKpCJYAH2lf\nNOJiyzwyup4ywSlP34Jfy/4LoYjNNbJSfpkyDyOBAoGAQ/ux4pBYy3LD6p3bc3vs\nFFcxximO4mXd/XYb2kkWH2rbG+GqU4qdAtdOiODYe16+WnHaybLjUtv4e1Acouto\nidGOJx65HOFLkH4dl0/I2RfPpV3mGV3g23cVziwzVshc9fd3BsdJyhaWayb1AJTD\nmjCQ8hgmdjfspLWy8dNe2lo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "flint-990@flint-promo.iam.gserviceaccount.com",
+  "client_id": "104245662890800055006",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/flint-990%40flint-promo.iam.gserviceaccount.com"
+}
