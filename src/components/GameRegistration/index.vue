@@ -2,12 +2,10 @@
   <div class="GameRegistration" id="GameRegistration">
     <ValidationObserver ref="form" v-slot="{ invalid, reset }">
       <br v-if="isFinishedRegistration" />
-      <h2 class="registrationEnd"  >
-        Регистрация
-      </h2>
-      <!-- <h2 class="registrationEnd" v-if="isFinishedRegistration">
+      <h2  v-if="!isFinishedRegistration"  class="registrationEnd">Регистрация</h2>
+      <h2 class="registrationEnd" v-if="isFinishedRegistration">
         Регистрация завершена
-      </h2> -->
+      </h2>
       <br v-if="isFinishedRegistration" />
       <form
         class="GameRegistration__form"
@@ -298,10 +296,10 @@ export default {
     };
   },
   computed: {
-    // isFinishedRegistration() {
-    //   const finishDate = new Date("2021-05-01T00:00:00");
-    //   return finishDate < new Date();
-    // },
+    isFinishedRegistration() {
+      const finishDate = new Date("2021-08-01T00:00:00");
+      return finishDate < new Date();
+    },
     isCorrectedPhoneNumber() {
       let checkNumber = this.model.phone !== null && this.model.phone.trim();
       const re = /(\s*)?(\+)?\d{12}/;
