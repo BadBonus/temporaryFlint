@@ -5,6 +5,7 @@ import VueLazyload from "vue-lazyload";
 // import VueSplide from "@splidejs/vue-splide"; //Вызывает поломку в ie11
 import VueScrollTo from "vue-scrollto";
 import VueWaypoint from "vue-waypoint";
+import VueGtag from "vue-gtag";
 import vco from "v-click-outside";
 import VueScreenSize from "vue-screen-size";
 
@@ -18,6 +19,12 @@ Vue.use(VueScrollTo);
 Vue.use(VueWaypoint);
 Vue.use(VueLazyload);
 Vue.use(VueScreenSize);
+
+Vue.use(VueGtag, {
+  config: {
+    id: "GTM-W3FZL74",
+  },
+});
 
 Vue.prototype.$desktopSize = 1025;
 
