@@ -9,6 +9,8 @@ import VueGtag from "vue-gtag";
 import vco from "v-click-outside";
 import VueScreenSize from "vue-screen-size";
 import { VueReCaptcha } from "vue-recaptcha-v3";
+import HttpService from "./services/http.service";
+
 
 Vue.config.productionTip = false;
 
@@ -18,6 +20,8 @@ Vue.use(VueScrollTo);
 Vue.use(VueWaypoint);
 Vue.use(VueLazyload);
 Vue.use(VueScreenSize);
+Vue.use(HttpService);
+
 
 Vue.use(VueGtag, {
   config: {

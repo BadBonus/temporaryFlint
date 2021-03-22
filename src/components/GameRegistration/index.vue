@@ -299,7 +299,7 @@ export default {
   },
   computed: {
     isFinishedRegistration() {
-      const finishDate = new Date("2021-08-01T00:00:00");
+      const finishDate = new Date("2021-07-01T00:00:00");
       return finishDate < new Date();
     },
     isCorrectedPhoneNumber() {
