@@ -2,7 +2,9 @@
   <div class="GameRegistration" id="GameRegistration">
     <ValidationObserver ref="form" v-slot="{ invalid, reset }">
       <br v-if="isFinishedRegistration" />
-      <h2  v-if="!isFinishedRegistration"  class="registrationEnd">Регистрация</h2>
+      <h2 v-if="!isFinishedRegistration" class="registrationEnd">
+        Регистрация
+      </h2>
       <h2 class="registrationEnd" v-if="isFinishedRegistration">
         Регистрация завершена
       </h2>
@@ -447,7 +449,12 @@ export default {
       form.append("phone", phone);
       form.append("surname", surname);
       form.append("operator", operator);
-      form.append("secondName", secondName);
+      if (secondName === null) {
+        form.append("secondName", "");
+      } else {
+        form.append("secondName", secondName);
+      }
+
       form.append("product[0]", item);
 
       axios
