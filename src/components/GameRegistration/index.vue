@@ -457,23 +457,54 @@ export default {
 
       form.append("product[0]", item);
 
-      axios
-        .post(postRegistration, form)
-        .then(({ data }) => {
-          this.finishedMessage = data.data.message;
-          this.reset();
-          this.forceBadRerender = false;
-          this.isLoadingData = false;
-          setTimeout(() => (this.forceBadRerender = true), 0);
-        })
-        .catch((error) => {
-          this.isLoadingData = false;
-          if (error.response) {
-            this.finishedMessage = error.response.data.message;
-          } else {
-            this.finishedMessage = "Произошла ошибка, попробуйте позже";
-          }
-        });
+      // axios
+      //   .post(postRegistration, form)
+      //   .then(({ data }) => {
+      //     this.finishedMessage = data.data.message;
+      //     this.reset();
+      //     this.forceBadRerender = false;
+      //     this.isLoadingData = false;
+      //     setTimeout(() => (this.forceBadRerender = true), 0);
+      //   })
+      //   .catch((error) => {
+      //     this.isLoadingData = false;
+      //     if (error.response) {
+      //       this.finishedMessage = error.response.data.message;
+      //     } else {
+      //       this.finishedMessage = "Произошла ошибка, попробуйте позже";
+      //     }
+      //   });
+
+      await this.$recaptcha("homepage").then((token) => {
+        this.$httpService
+          .post("participate/captcha/verify", {
+            secret: `${process.env.VUE_APP_SECRET_SITE_KEY}`,
+            token: token,
+          })
+          .then((response) => {
+            if (response.data.success.success) {
+              axios
+                .post(postRegistration, form)
+                .then(({ data }) => {
+                  this.finishedMessage = data.data.message;
+                  this.reset();
+                  this.forceBadRerender = false;
+                  this.isLoadingData = false;
+                  setTimeout(() => (this.forceBadRerender = true), 0);
+                })
+                .catch((error) => {
+                  this.isLoadingData = false;
+                  if (error.response) {
+                    this.finishedMessage = error.response.data.message;
+                  } else {
+                    this.finishedMessage = "Произошла ошибка, попробуйте позже";
+                  }
+                });
+            } else {
+              this.$snotify.error("Похоже, что Вы - робот");
+            }
+          });
+      });
     },
   },
   mounted() {
