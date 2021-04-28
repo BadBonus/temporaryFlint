@@ -20,16 +20,22 @@
         alt="декорация линии"
         class="MainBlock__decorationLines"
       /> -->
-      <!-- <img src="../assets/mainBlock_line_mob.png" alt="" class="MainBlock__decorationLines"> -->
+      <!-- <img src="../assets/mainBlock_line_mob.png" alt="" class="MainBlock__decorationLines"> --><img
+        v-if="!isMobileSize"
+        src="../assets/desktopLines.svg"
+        class="desktopLines"
+        alt="lines"
+      />
       <div class="MainBlock__lines">
-        <template v-if="!isMobileSize">
+        <!-- <template v-if="!isMobileSize">
           <img src="../assets/lines/Vector1.svg" alt="line" />
           <img src="../assets/lines/Vector2.svg" alt="line" />
           <img src="../assets/lines/Vector3.svg" alt="line" />
           <img src="../assets/lines/Vector4.svg" alt="line" />
           <img src="../assets/lines/Vector5.svg" alt="line" />
           <img src="../assets/lines/Vector6.svg" alt="line" />
-        </template>
+        </template> -->
+
         <template v-if="isMobileSize">
           <img src="../assets/lines/Vector2_m.svg" alt="line" />
           <img src="../assets/lines/Vector3_m.svg" alt="line" />
@@ -126,9 +132,10 @@ export default {
       left: 6%;
       top: 0;
       margin-top: 5%;
-      font-size: 9.92vw;
-      padding-top: 0;
       text-align: left;
+
+      font-size: 8.42vw;
+      padding-top: 0.7vw;
     }
     span {
       display: block;
@@ -152,11 +159,14 @@ export default {
     position: relative;
     @media @desktop {
       width: 25vw;
-      width: 74%;
       margin-top: 0;
       margin: auto;
-      padding-top: 8.1vw;
-      margin-right: 2.35%;
+      padding-top: 0;
+
+      position: relative;
+      top: 1vw;
+      margin-right: 4.4vw;
+      width: 55.42vw;
     }
   }
 
@@ -325,6 +335,12 @@ export default {
     @media @desktop {
       padding-bottom: 7.6%;
     }
+  }
+
+  .desktopLines {
+    position: absolute;
+    top: 15.5vw;
+    width: 100%;
   }
 }
 </style>
