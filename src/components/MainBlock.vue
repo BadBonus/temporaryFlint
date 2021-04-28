@@ -164,9 +164,9 @@ export default {
       padding-top: 0;
 
       position: relative;
-      top: 2.1vw;
-      margin-right: 4.4vw;
-      width: 55.42vw;
+      top: -0.5vw;
+      margin-right: 3vw;
+      width: 58.52vw;
     }
   }
 
