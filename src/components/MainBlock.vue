@@ -164,7 +164,7 @@ export default {
       padding-top: 0;
 
       position: relative;
-      top: 1vw;
+      top: 2.1vw;
       margin-right: 4.4vw;
       width: 55.42vw;
     }
@@ -339,7 +339,7 @@ export default {
 
   .desktopLines {
     position: absolute;
-    top: 15.5vw;
+    top: 16.6vw;
     width: 100%;
   }
 }
